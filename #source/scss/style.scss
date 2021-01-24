@@ -1,0 +1,420 @@
+$minWidth: 320px;
+$maxWidth: 1400;
+$maxWidthContainer: 1180;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.page{
+    flex:1 1 auto;
+}
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+.header {
+    &__container {
+        position: relative;
+         z-index: 4;
+    }
+    
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding:23px 0 20px;
+    }
+    
+    &__logo {
+        flex:0 1 383px;
+        display: flex;
+        align-items: center;
+        
+        @media(max-width:1060px){
+            flex:0 1 auto;
+        }
+    }
+    
+    &__socials {
+        flex:0 1 165px;
+        
+        @media(max-width:650px){
+           flex:0 1 130px;
+        }
+    }
+    
+    &__info{
+        flex:0 1 420px;
+        @media(max-width:1060px){
+            flex:0 1 auto;
+        }
+    }
+    
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__bottom{
+        padding:20px 0 25px;
+    }
+}
+
+.logo-header{
+    
+    &__icon {
+        padding:0 26px 0 10px;
+        position: relative;
+        
+        @media(max-width:650px){
+            padding:0 10px;
+        }
+        
+        a{
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 52px;
+            line-height: 63px;
+            color: #E1E1E1;
+            
+            @media(max-width:$md3 + px){
+                font-size: 40px;
+            }
+            
+            @media(max-width:400px){
+                font-size: 32px;
+            }
+            
+             @media(max-width:650px){
+                font-size: 25px;
+            }
+        }
+    }
+    
+    &__text {
+        padding-left: 23px;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #5D5D5D;
+        position: relative;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            top:55%;
+            left:0;
+            transform:translateY(-50%);
+            height: 40px;
+            width: 2px;
+            background: #89AFEF;
+        }
+        
+        @media(max-width:1060px){
+            display: none;
+        }
+    }
+}
+
+.socials-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media(max-width:540px){
+        display: none;
+    }
+    
+    &__icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 20px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s transform;
+        cursor: pointer;
+        
+        @media(max-width:$md3 + px){
+           width: 39px;
+           height: 39px;
+        }
+        
+        @media(max-width:650px){
+           width: 34px;
+           height: 34px;
+        }
+        
+        
+        &:hover{
+            transform: scale(1.02) translateY(-3px);
+        }
+        
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &_whatsapp{
+            background: #2DD038;
+            box-shadow: 0px 8px 25px rgba(45, 208, 56, 0.497678);
+        }
+        
+        &_viber{
+            background: #7B519D;
+            box-shadow: 0px 8px 25px rgba(123, 81, 157, 0.503797);
+        }
+        
+        &_telegram{
+            background: #5BBAF0;
+            box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
+        }
+    }
+}
+
+.info-header{
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+    
+    &__contacts{
+        margin-right: 26px;
+        
+        @media(max-width:1060px){
+            display: flex;
+            margin-right: 15px;
+        }
+    }
+    
+    &__wrapper{
+        
+        @media(max-width:1060px){
+            min-width: 16px;
+            min-height: 16px;
+            margin-right: 10px;
+        }
+        
+        &_1{
+            background:url('/images/callback.png') left no-repeat;
+            padding-left: 27px;
+            line-height: 24px;
+             @media(max-width:1060px){
+                padding:0;
+            }
+        }
+        
+        &_2{
+            background:url('/images/mail.png') 14px center no-repeat;
+            padding-left: 27px;
+            line-height: 20px;
+            @media(max-width:1060px){
+                padding:0;
+                background:url('/images/mail.png') left no-repeat;
+            }
+        }
+    }
+    
+    &__number{
+        display: block;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 2px;
+        
+        @media(max-width:1060px){
+            display: none;
+        }
+    }
+    
+    &__mail{
+        display: block;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        text-align: right;
+        
+        @media(max-width:1060px){
+            display: none;
+        }
+    }
+    
+}
+
+.button{
+    text-decoration: none;
+    border:none;
+    padding:10px 29px;
+    cursor: pointer;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 3px;
+    
+    &_light{
+        background: linear-gradient(90deg, #F6BD60 0%, #E88952 100%);
+        box-shadow: 0px 8px 18px rgba(242, 147, 81, 0.450503);
+        transition:background 1s all;
+
+        &:hover{
+             background: linear-gradient(90deg, rgba(242, 179, 76, 0.9) 0%, rgba(232, 137, 82, 0.81) 100%);
+        }
+        
+        @media(max-width:$md3 + px){
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+        
+        @media(max-width:400px){
+            padding:0;
+            background:none;
+            box-shadow: none;
+            font-size: 16px;
+            color:#272793;
+            
+            &:hover{
+                background:none;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    &_primary{
+        background: #7389d9;
+        box-shadow: 0px 12px 20px rgba(132, 170, 237, 0.454846);
+        padding:15px 74px;
+        transition: .3s background;
+        cursor: pointer;
+        
+        &:hover{
+            background: rgba(135, 175, 241, 0.86);
+        }
+    }
+}
+
+.list-header{
+    list-style: none;
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    
+    &__link{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #333333;
+        
+        @media(min-width:992px){
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        
+        @media(max-width: 1050px){
+            display: none;
+        }
+        
+        @media(max-width:1060px){
+            font-size: 14px;
+        }
+    }
+}
+
+.welcome-page {
+    overflow: hidden;
+    
+    &::before{
+        content:"";
+        position: absolute;
+        top:0;
+        right: 0;
+        width:100%;
+        height: 100%;
+        background: url('/images/bg.jpg') 105% no-repeat;
+        background-size:contain;
+    }
+    
+    &__container {
+        padding-top:95px;
+        padding-bottom: 148px;
+    }
+    
+    &__info {
+        width: 660px;
+        position: relative;
+        z-index: 5;
+    }
+    
+    &__text {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 39px;
+        line-height: 51px;
+        color: #333333;
+
+    }
+    &__subtext {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #333333;
+        margin:40px 0;
+        
+        span{
+            font-weight: bold;
+        }
+    }
+    
+    &__banner{
+        position: absolute;
+        bottom:0;
+        right: 17%;
+        
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top:0px;
+        }
+    }
+}
